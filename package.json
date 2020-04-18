@@ -1,0 +1,55 @@
+{
+    "name": "dontevendare-server",
+    "version": "1.0.0",
+    "description": "server",
+    "main": "index.js",
+    "module": "main.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/emukupa/dontevendare-server.git"
+    },
+    "keywords": [
+        "server",
+        "graphql",
+        "express"
+    ],
+    "author": "Edward Manda",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/emukupa/dontevendare-server/issues"
+    },
+    "homepage": "https://github.com/emukupa/dontevendare-server#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "esm": "^3.2.25",
+        "express": "^4.17.1",
+        "express-graphql": "^0.9.0",
+        "graphql": "^15.0.0",
+        "helmet": "^3.22.0",
+        "knex": "^0.20.15",
+        "mongoose": "^5.9.9",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "husky": "^4.2.5",
+        "jest": "^25.3.0",
+        "lint-staged": "^10.1.5",
+        "nodemon": "^2.0.3",
+        "prettier": "^2.0.4"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": ["prettier --write", "git add"]
+    }
+}
